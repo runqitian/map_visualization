@@ -105,7 +105,7 @@ function searchHash(){
                 position: item[4],   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
             });
             marker.setLabel({
-                offset: new AMap.Pixel(0, 0),  //设置文本标注偏移量
+                offset: new AMap.Pixel(-35, -10),  //设置文本标注偏移量
                 content: "<div class='info'>" + item[5] + "</div>", //设置文本标注内容
                 direction: 'right' //设置文本标注方位
             });
