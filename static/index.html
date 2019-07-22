@@ -3,17 +3,16 @@
         <title>map application</title>
         <script src="jquery-3.4.1.min.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> 
         <style type="text/css">
             body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
             #funcarea{position:absolute; top:20px; left:50px;}
-            #allmap{height:100%; width:100%; position:relative;}
-            #r-result{width:100%;}
+            #container{position: relative;height: 100%;width: 100%;}
         </style>
-        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OwXkCu4ws7GKHAb0GgohVcw6cbrAqTmB"></script>
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=cf39d9f5e4096141a6c8169fbfd848b3"></script> 
     </head>
     <body>
-        <div id="allmap"></div>
+        <div id="container"></div> 
         <div id="funcarea">
           <input type="text" id="hashinput" style="width:150px; height:30px; position: relative; margin-left: 10px;"/>
           <button type="button" onclick="searchHash()" style="width:100px; height:30px; position: relative; margin-left: 10px;"><font size="3">search</font></button>
@@ -21,5 +20,5 @@
           <button type="button" onclick="hideAll()" style="width:100px; height:30px; position: relative; margin-left: 50px;"><font size="3">hide all</font></button>
         </div>
     </body>
-    <script src="application.js"></script>
+    <script src="application2.js"></script>
 </html>
