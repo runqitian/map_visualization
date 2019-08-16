@@ -70,11 +70,17 @@ function initialize_map(){
         style: style
     });
 
-    var marker = new AMap.Marker({content: ' ', map: map});
-
+    var marker_list = new Array();
     mass.on('mouseover', function (e) {
+        var marker = new AMap.Marker({content: ' ', map: map});
         marker.setPosition(e.data.lnglat);
-        marker.setLabel({content: e.data.name})
+        marker.setLabel({content: e.data.name});
+        marker_list.push(marker);
+    });
+
+    mass.on('mouseout', function (e) {
+        map.remove(marker_list[0]);
+        marker_list.pop();
     });
 
     mass.setMap(map);
